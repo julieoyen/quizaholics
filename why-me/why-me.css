@@ -1,0 +1,26 @@
+.wm-outer-box {
+    margin-top: 32px;
+}
+
+.wm-cards {
+    height: 348px;
+    width: 302px;
+}
+
+#card-1 {
+    background: var(--firstcard);
+    position: absolute;
+    top: 168px;
+    z-index: 5;
+}
+
+#card-2 {
+    background: var(--secondcard);
+    transform: rotate(4deg);
+}
+
+.game-btn-box {
+    display: flex;
+    position: relative;
+    margin-top: 96px;
+}

@@ -1,0 +1,444 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "text": "📵 Er alltid på mobilen?"
+    },
+    {
+      "id": 2,
+      "text": "💪 Har mest viljestyrke?"
+    },
+    {
+      "id": 3,
+      "text": "🍺 Er best på å styrte?"
+    },
+    {
+      "id": 4,
+      "text": "🚘 Er dårligst sjåfør?"
+    },
+    {
+      "id": 5,
+      "text": "🐗 Er mest vill?"
+    },
+    {
+      "id": 6,
+      "text": "💸 Spanderer alltid på fylla?"
+    },
+    {
+      "id": 7,
+      "text": "🌊 Er kåtest?"
+    },
+    {
+      "id": 8,
+      "text": "🤓 Er flinkest på skolen?"
+    },
+    {
+      "id": 9,
+      "text": "🤲 Tar seg mest på puppene?"
+    },
+    {
+      "id": 10,
+      "text": "🎅 Trodde lengst på julenissen?"
+    },
+    {
+      "id": 11,
+      "text": "🍻SKÅL🍻"
+    },
+    {
+      "id": 12,
+      "text": "⏳ Mest ubesluttsom?"
+    },
+    {
+      "id": 13,
+      "text": "🥃 Har høyest toleranse?"
+    },
+    {
+      "id": 14,
+      "text": "✌️ Er mest rettferdig?"
+    },
+    {
+      "id": 15,
+      "text": "😏 Lager de sjukeste lydene i senga?"
+    },
+    {
+      "id": 16,
+      "text": "🎗 Gir mest til veldedighet?"
+    },
+    {
+      "id": 17,
+      "text": "🙄 Er mest overlegen?"
+    },
+    {
+      "id": 18,
+      "text": "💯 Kommer til å lykkes best i livet?"
+    },
+    {
+      "id": 19,
+      "text": "🪂 Er en adrenalin junkie?"
+    },
+    {
+      "id": 20,
+      "text": "🏆 Googler seg selv oftest?"
+    },
+    {
+      "id": 21,
+      "text": "🍻SKÅL🍻"
+    },
+    {
+      "id": 22,
+      "text": "😇 Er lykkeligst?"
+    },
+    {
+      "id": 23,
+      "text": "🕵️‍♀️ Er den verste stalkeren?"
+    },
+    {
+      "id": 24,
+      "text": "🎻 Har dårligst musikksmak?"
+    },
+    {
+      "id": 25,
+      "text": "🥱 Kommer til og sovne med en pizza i hånden?"
+    },
+    {
+      "id": 26,
+      "text": "🚿 Har shava og er forberedt på alt?"
+    },
+    {
+      "id": 27,
+      "text": "🎖 Har hatt seg med flest?"
+    },
+    {
+      "id": 28,
+      "text": "🏋️‍♀️ Er sterkest?"
+    },
+    {
+      "id": 29,
+      "text": "🤮 Kommer mest sannsynlig til å spy i kveld?"
+    },
+    {
+      "id": 30,
+      "text": "🗣 Har finest dialekt?"
+    },
+    {
+      "id": 31,
+      "text": "🍻SKÅL🍻"
+    },
+    {
+      "id": 32,
+      "text": "🔮 Havner på gata?"
+    },
+    {
+      "id": 33,
+      "text": "☀️ Lyser opp rommet?"
+    },
+    {
+      "id": 34,
+      "text": "🦄 Skiller seg mest ut i mengden?"
+    },
+    {
+      "id": 35,
+      "text": "😎 Har størst kjendisfaktor?"
+    },
+    {
+      "id": 36,
+      "text": "🧗‍♂️ Er mest eventyrlysten?"
+    },
+    {
+      "id": 37,
+      "text": "👓 Har best syn?"
+    },
+    {
+      "id": 38,
+      "text": "💤 Snorker mest?"
+    },
+    {
+      "id": 39,
+      "text": "💩 Slipper de verste fisene?"
+    },
+    {
+      "id": 40,
+      "text": "🙋‍♂️ Kunne levd best med bare en arm og ett ben?"
+    },
+    {
+      "id": 41,
+      "text": "🏃‍♂️ Løper fortest?"
+    },
+    {
+      "id": 42,
+      "text": "🤓 Nørder mest?"
+    },
+    {
+      "id": 43,
+      "text": "💍 Kommer til å gifte seg først?"
+    },
+    {
+      "id": 44,
+      "text": "🍻SKÅL🍻"
+    },
+    {
+      "id": 45,
+      "text": "🛫 Hvem er medlem av Mile High Club?"
+    },
+    {
+      "id": 46,
+      "text": "💰 Kommer til å bli rikest?"
+    },
+    {
+      "id": 47,
+      "text": "💋 Er den beste til å kysse?"
+    },
+    {
+      "id": 48,
+      "text": "🐾 Tar med seg noen hjem i kveld?"
+    },
+    {
+      "id": 49,
+      "text": "🌵 Stikker mest?"
+    },
+    {
+      "id": 50,
+      "text": "🐎 Rir best?"
+    },
+    {
+      "id": 51,
+      "text": "🏡 Bor finest?"
+    },
+    {
+      "id": 52,
+      "text": "🥽 Er mest positiv til nye utfordringer?"
+    },
+    {
+      "id": 53,
+      "text": "👨 Er en av gutta?"
+    },
+    {
+      "id": 54,
+      "text": "📸 Tar flest selfies?"
+    },
+    {
+      "id": 55,
+      "text": "🍻SKÅL🍻"
+    },
+    {
+      "id": 56,
+      "text": "🔚 Kommer raskest?"
+    },
+    {
+      "id": 57,
+      "text": "🏝 Kunne du vært på en øde øy med?"
+    },
+    {
+      "id": 58,
+      "text": "🥶 Har lettest for å bryte isen med noen ukjente?"
+    },
+    {
+      "id": 59,
+      "text": "🎓 Kommer mest sannsynlig til å stryke et fag dette semesteret?"
+    },
+    {
+      "id": 60,
+      "text": "🚵 Er mest sporty?"
+    },
+    {
+      "id": 61,
+      "text": "🔥 Lager best stemning på vors?"
+    },
+    {
+      "id": 62,
+      "text": "👀 Har de vakreste øyene?"
+    },
+    {
+      "id": 63,
+      "text": "❌ Kommer seg ikke inn på byen i kveld?"
+    },
+    {
+      "id": 64,
+      "text": "🛏 Er best i senga?"
+    },
+    {
+      "id": 65,
+      "text": "🆘 Er mest drita?"
+    },
+    {
+      "id": 66,
+      "text": "🍻SKÅL🍻"
+    },
+    {
+      "id": 67,
+      "text": "🏫 Har best karakterer nå?"
+    },
+    {
+      "id": 68,
+      "text": "🎮 Er den svetteste gameren?"
+    },
+    {
+      "id": 69,
+      "text": "🐻 Har best sjanse til å overleve mot en bjørn?"
+    },
+    {
+      "id": 70,
+      "text": "👓 Kler briller best?"
+    },
+    {
+      "id": 71,
+      "text": "🥺 Er snillest?"
+    },
+    {
+      "id": 72,
+      "text": "👌 Har hooket med flest?"
+    },
+    {
+      "id": 73,
+      "text": "💼 Er mest klar for arbeidslivet?"
+    },
+    {
+      "id": 74,
+      "text": "👱‍♀️ Har flest blonde øyeblikk?"
+    },
+    {
+      "id": 75,
+      "text": "😡 Har mest temperament?"
+    },
+    {
+      "id": 76,
+      "text": "😘 Holder på med flere samtidig?"
+    },
+    {
+      "id": 77,
+      "text": "🍻SKÅL🍻"
+    },
+    {
+      "id": 78,
+      "text": "😌 Selv tror den er morsomst?"
+    },
+    {
+      "id": 79,
+      "text": "💔 Har hatt flest kjærester?"
+    },
+    {
+      "id": 80,
+      "text": "🐭 Er en liten luremus?"
+    },
+    {
+      "id": 81,
+      "text": "🎧 Har verst musikksmak?"
+    },
+    {
+      "id": 82,
+      "text": "🎭 Har mest humørsvingninger?"
+    },
+    {
+      "id": 83,
+      "text": "😵 Synger styggest?"
+    },
+    {
+      "id": 84,
+      "text": "💈 Har mest kroppshår?"
+    },
+    {
+      "id": 85,
+      "text": "☠️ Er tøffest i trynet?"
+    },
+    {
+      "id": 86,
+      "text": "💄 Har finest lepper?"
+    },
+    {
+      "id": 87,
+      "text": "🔞 Har den mest skitne nettleserhistorikken?"
+    },
+    {
+      "id": 88,
+      "text": "🍻SKÅL🍻"
+    },
+    {
+      "id": 89,
+      "text": "🚇 Er best kjent i byen dere er i?"
+    },
+    {
+      "id": 90,
+      "text": "🚑 Hvem har vært flest ganger på legevakten det siste året?"
+    },
+    {
+      "id": 91,
+      "text": "💃 Hadde gjort det best på skal vi danse?"
+    },
+    {
+      "id": 92,
+      "text": "👨‍👩‍👦 Kunne du aldri hatt med i et familieselskap?"
+    },
+    {
+      "id": 93,
+      "text": "🤯 Tåler smerte best?"
+    },
+    {
+      "id": 94,
+      "text": "🤣 Driter seg alltid ut?"
+    },
+    {
+      "id": 95,
+      "text": "🏆 Er flinkest til å sjekke opp på byen?"
+    },
+    {
+      "id": 96,
+      "text": "🚁 Er mest spontan?"
+    },
+    {
+      "id": 97,
+      "text": "🔮 Tror på synske?"
+    },
+    {
+      "id": 98,
+      "text": "📞 Har kortest telefonsamtaler?"
+    },
+    {
+      "id": 99,
+      "text": "🍻SKÅL🍻"
+    },
+    {
+      "id": 100,
+      "text": "💰 Har størst lommebok?"
+    },
+    {
+      "id": 101,
+      "text": "🚽 Ser på mest reality-drit?"
+    },
+    {
+      "id": 102,
+      "text": "💙 Har tatt kongla flest ganger?"
+    },
+    {
+      "id": 103,
+      "text": "🦶 Har størst føtter?"
+    },
+    {
+      "id": 104,
+      "text": "🕵️‍♂️ Er mest mystisk?"
+    },
+    {
+      "id": 105,
+      "text": "🙊 Minner mest om en ape?"
+    },
+    {
+      "id": 106,
+      "text": "💌 Har hatt flest kjønnssjukdommer?"
+    },
+    {
+      "id": 107,
+      "text": "🏃 Tar alltid en for laget?"
+    },
+    {
+      "id": 108,
+      "text": "😷 Er mest frekk i kjeften?"
+    },
+    {
+      "id": 109,
+      "text": "💯 Skal ta bonski sammen med deg?"
+    },
+    {
+      "id": 110,
+      "text": "🍻SKÅL🍻"
+    }
+  ]
+}
