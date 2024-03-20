@@ -3,7 +3,7 @@
 }
 
 :root{
-  --almostwhite: #FBFAFE;
+  --almostwhite: #e5e5e5;
   --gradienttext: linear-gradient(#9F87FF, #C275FF);
   --firstcard: linear-gradient(#B547D5, #F05A8A);
   --secondcard: linear-gradient(#5964E0, #B848D4);
@@ -19,7 +19,7 @@ body {
 
 h1 {
     font-family: 'Koulen';
-    font-weight: 100px;
+    font-weight: 100;
 }
 
 .game-btn {
@@ -27,9 +27,16 @@ h1 {
     font-size: larger;
     height: 40px;
     width: 90px;
-    padding: 10px, 10px;
     border-radius: 50px;
     border: none;
+    cursor: pointer;
+    background-color: #e5e5e5;
+    margin: 0px 25px;
+    color: black;
+}
+
+.game-btn:hover{
+    background: #ddd;
 }
 
 .game-cards {
@@ -39,3 +46,4 @@ h1 {
     align-items: center;
     justify-content: center;
 }
+
