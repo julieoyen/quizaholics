@@ -2,10 +2,17 @@
     box-sizing: border-box;
 }
 
+:root{
+  --almostwhite: #FBFAFE;
+  --gradienttext: linear-gradient(#9F87FF, #C275FF);
+  --firstcard: linear-gradient(#B547D5, #F05A8A);
+  --secondcard: linear-gradient(#5964E0, #B848D4);
+}
+
 body {
-    background-color: rebeccapurple;
+    background: linear-gradient(to bottom left, #221133, #663399) no-repeat;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
