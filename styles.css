@@ -9,3 +9,19 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+h1 {
+    font-family: 'Koulen';
+    font-weight: 100px;
+}
+
+.game-btn {
+    font-family: 'Koulen';
+    font-size: larger;
+    height: 40px;
+    width: 90px;
+    padding: 10px, 10px;
+    border-radius: 50px;
+    border: none;
+}
+
