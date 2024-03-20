@@ -5,16 +5,12 @@
 .wm-cards {
     height: 348px;
     width: 302px;
-    border-radius: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #card-1 {
     background: var(--firstcard);
     position: absolute;
-    top: 162px;
+    top: 168px;
     z-index: 5;
 }
 

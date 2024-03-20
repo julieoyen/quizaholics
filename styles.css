@@ -32,3 +32,10 @@ h1 {
     border: none;
 }
 
+.game-cards {
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
