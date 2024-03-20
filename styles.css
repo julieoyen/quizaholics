@@ -19,7 +19,7 @@ body {
 
 h1 {
     font-family: 'Koulen';
-    font-weight: 100px;
+    font-weight: 100;
 }
 
 .game-btn {
@@ -27,8 +27,12 @@ h1 {
     font-size: larger;
     height: 40px;
     width: 90px;
-    padding: 10px, 10px;
     border-radius: 50px;
     border: none;
+    cursor: pointer;
+    background-color: #e7e7e7;
 }
 
+.game-btn:hover{
+    background: #ddd;
+}
