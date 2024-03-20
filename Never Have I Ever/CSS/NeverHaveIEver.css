@@ -1,24 +1,24 @@
-.wm-outer-box {
+.nhie-outer-box {
     margin-top: 32px;
 }
 
-.wm-cards {
-    height: 348px;
-    width: 302px;
+.nhie-cards {
+    height: 200px;
+    width: 320px;
     border-radius: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#card-1 {
+#first-card {
     background: var(--firstcard);
     position: absolute;
     top: 162px;
     z-index: 5;
 }
 
-#card-2 {
+#second-card {
     background: var(--secondcard);
     transform: rotate(4deg);
 }
