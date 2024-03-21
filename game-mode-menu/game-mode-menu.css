@@ -49,6 +49,11 @@ h2 {
     border-radius: 28px;
 }
 
+.why-me-icon img {
+    height: 40px;
+    width: 40px;
+}
+
 h3 {
     color: var(--almostwhite);
     font-family: comfortaa, sans-serif;
@@ -66,4 +71,9 @@ h3 {
     width: 89vw;
     height: 157px;
     border-radius: 28px;
+}
+
+.nhie-icon img {
+    height: 40px;
+    width: 40px;
 }
