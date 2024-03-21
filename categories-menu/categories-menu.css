@@ -17,7 +17,7 @@ main {
 
 h2 {
     font-size: 55px;
-    width: 400px;
+    width: 375px;
     font-family: koulen, sans-serif;
     font-weight: normal;
     letter-spacing: 5.5px;
@@ -85,7 +85,7 @@ h3 {
 
 .categories-btns {
     display: grid;
-    grid-template-columns: 157px 157px;
+    grid-template-columns: 42vw 42vw;
     grid-template-rows: auto;
     column-gap: 20px;
     row-gap: 20px;
@@ -104,4 +104,9 @@ h3 {
     justify-content: flex-end;
     padding-left: 22px;
     gap: 20px;
+}
+
+.icon img {
+    height: 40px;
+    width: 40px;
 }
