@@ -17,6 +17,15 @@ body {
     align-items: center;
 }
 
+.lang-btns {
+    display: flex;
+}
+
+.lang-btns button {
+    background: none;
+    /*border: none;*/
+}
+
 h1 {
     font-family: 'Koulen', sans-serif;
     font-weight: 100;
