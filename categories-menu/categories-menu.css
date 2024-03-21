@@ -1,0 +1,112 @@
+h1 {
+    margin: 0;
+    color: var(--almostwhite);
+}
+
+body{
+    height: 100%;
+}
+
+main {
+    width: 100vw;
+}
+
+.quiz-categories {
+    margin: 62px 0 20px 8px;
+}
+
+h2 {
+    font-size: 55px;
+    width: 375px;
+    font-family: koulen, sans-serif;
+    font-weight: normal;
+    letter-spacing: 5.5px;
+    background-image: linear-gradient(90deg, #9F87FF, #C275FF);
+    background-clip: text;
+    color: transparent;
+    margin: 0;
+}
+
+h3 {
+    color: var(--almostwhite);
+    font-family: comfortaa, sans-serif;
+    font-weight: normal;
+    margin: 0 0 32px 0;
+}
+
+.quiz-header {
+    font-family: comfotaa, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--almostwhite);
+}
+
+.history {
+    grid-area: history;
+    height: 157px;
+    background-image: linear-gradient(325deg, #EF7277, #C245D1);
+}
+
+.music {
+    grid-area: music;
+    height: 158px;
+    background-image: linear-gradient(225deg, #F27570, #C346D2);
+}
+
+.science {
+    grid-area: science;
+    height: 239px;
+    background-image: linear-gradient(150deg, #F3786B, #E4579A);
+}
+
+.movies {
+    grid-area: movies;
+    height: 239px;
+    background-image: linear-gradient(45deg, #4B6EDE, #C245D1);
+}
+
+.dirty {
+    grid-area: dirty;
+    height: 158px;
+    background-image: linear-gradient(150deg, #E55797, #C245D1);
+}
+
+.celebrity {
+    grid-area: celebrity;
+    height: 157px;
+    background-image: linear-gradient(45deg, #4B6EDE, #C245D1);
+}
+
+.categories-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 107px;
+}
+
+.categories-btns {
+    display: grid;
+    grid-template-columns: 42vw 42vw;
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-areas:
+    "history history"
+    "music science"
+    "movies science"
+    "movies dirty"
+    "celebrity celebrity";
+}
+
+.categories-btn {
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 22px;
+    gap: 20px;
+}
+
+.icon img {
+    height: 40px;
+    width: 40px;
+}
