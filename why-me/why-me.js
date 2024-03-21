@@ -1,8 +1,8 @@
 async function fetchJSON() {
     try {
-        const response = await fetch('../why-me/why-me.json'); // Path to your JSON file
+        const response = await fetch('../why-me/why-me.json');
         const data = await response.json();
-        return data.cards; // Accessing the 'cards' array
+        return data.cards;
     } catch (error) {
         console.error('Error fetching JSON:', error);
         return [];
