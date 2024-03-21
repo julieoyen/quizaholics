@@ -1,46 +1,69 @@
-async function fetchJSON() {
+async function fetchJSON(path) {
     try {
-        const response = await fetch('../why-me/why-me.json');
+        const response = await fetch(path);
         const data = await response.json();
-        return data.cards;
+        return data;
     } catch (error) {
         console.error('Error fetching JSON:', error);
         return [];
     }
 }
 
-async function displayItem(index) {
+async function displayItem(index, dataList) {
     const cardDiv = document.getElementById('card-1');
-    const data = await fetchJSON();
-    if (data.length === 0) {
+    if (dataList.length === 0) {
         cardDiv.innerHTML = '<p>No data available</p>';
         return;
     }
-    const currentItem = data[index];
+    const currentItem = dataList[index];
     cardDiv.innerHTML = `
-                <p>${currentItem.id}</p>
-                <p>${currentItem.text}</p>
-            `;
+            <p>${currentItem.id}</p>
+            <p>${currentItem.text}</p>
+        `;
 }
 
-async function displayNextItem() {
+async function displayNextItem(dataList) {
     let currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
-    const data = await fetchJSON();
-    currentIndex = (currentIndex + 1) % data.length;
+    currentIndex = (currentIndex + 1) % dataList.length;
     document.getElementById('card-1').dataset.index = currentIndex;
-    displayItem(currentIndex);
+    displayItem(currentIndex, dataList);
+    document.getElementById('back').disabled = false;
 }
 
-async function displayPreviousItem() {
+async function displayPreviousItem(dataList) {
     let currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
-    const data = await fetchJSON();
-    currentIndex = (currentIndex - 1 + data.length) % data.length;
+    currentIndex = (currentIndex - 1 + dataList.length) % dataList.length;
     document.getElementById('card-1').dataset.index = currentIndex;
-    displayItem(currentIndex);
+    displayItem(currentIndex, dataList);
+    if (currentIndex === 0) {
+        document.getElementById('back').disabled = true;
+    }
 }
 
-window.onload = () => {
-    displayItem(0);
-    document.getElementById('next').addEventListener('click', displayNextItem);
-    document.getElementById('back').addEventListener('click', displayPreviousItem);
+window.onload = async () => {
+    document.getElementById('card-1').innerHTML = '<p>Start playing!</p>';
+    document.getElementById('back').disabled = true;
+
+    let list1Data = await fetchJSON('../why-me/why-me.json').then(data => data.list1);
+    let list2Data = await fetchJSON('../why-me/why-me-english.json').then(data => data.list2);
+
+    document.getElementById('eng-btn').addEventListener('click', () => {
+        document.getElementById('card-1').dataset.index = 0;
+        displayItem(0, list2Data);
+    });
+
+    document.getElementById('nor-btn').addEventListener('click', () => {
+        document.getElementById('card-1').dataset.index = 0;
+        displayItem(0, list1Data);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+        const currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
+        displayNextItem(document.getElementById('eng-btn').classList.contains('active') ? list2Data : list1Data);
+    });
+
+    document.getElementById('back').addEventListener('click', () => {
+        const currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
+        displayPreviousItem(document.getElementById('eng-btn').classList.contains('active') ? list2Data : list1Data);
+    });
 };
