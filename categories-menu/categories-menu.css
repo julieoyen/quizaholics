@@ -4,7 +4,7 @@ h1 {
 }
 
 body{
-    height: 1096px;
+    height: 100%;
 }
 
 main {
@@ -17,7 +17,7 @@ main {
 
 h2 {
     font-size: 55px;
-    width: 4200px;
+    width: 400px;
     font-family: koulen, sans-serif;
     font-weight: normal;
     letter-spacing: 5.5px;
@@ -44,43 +44,43 @@ h3 {
 .history {
     grid-area: history;
     height: 157px;
-    border-radius: 28px;
-    background: #221133;
+    background-image: linear-gradient(325deg, #EF7277, #C245D1);
 }
 
 .music {
     grid-area: music;
     height: 158px;
-    border-radius: 28px;
-    background: #221133;
+    background-image: linear-gradient(225deg, #F27570, #C346D2);
 }
 
 .science {
     grid-area: science;
     height: 239px;
-    border-radius: 28px;
-    background: #221133;
+    background-image: linear-gradient(150deg, #F3786B, #E4579A);
 }
 
 .movies {
     grid-area: movies;
     height: 239px;
-    border-radius: 28px;
-    background: #221133;
+    background-image: linear-gradient(45deg, #4B6EDE, #C245D1);
 }
 
 .dirty {
     grid-area: dirty;
     height: 158px;
-    border-radius: 28px;
-    background: #221133;
+    background-image: linear-gradient(150deg, #E55797, #C245D1);
 }
 
 .celebrity {
     grid-area: celebrity;
     height: 157px;
-    border-radius: 28px;
-    background: #221133;
+    background-image: linear-gradient(45deg, #4B6EDE, #C245D1);
+}
+
+.categories-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 107px;
 }
 
 .categories-btns {
@@ -95,4 +95,13 @@ h3 {
     "movies science"
     "movies dirty"
     "celebrity celebrity";
+}
+
+.categories-btn {
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 22px;
+    gap: 20px;
 }
