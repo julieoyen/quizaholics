@@ -18,12 +18,12 @@ body {
 }
 
 h1 {
-    font-family: 'Koulen';
+    font-family: 'Koulen', sans-serif;
     font-weight: 100;
 }
 
-.game-btn {
-    font-family: 'Koulen';
+.game-btn, .uni-btn {
+    font-family: 'Koulen', sans-serif;
     font-size: larger;
     height: 40px;
     width: 90px;
@@ -35,7 +35,7 @@ h1 {
     color: black;
 }
 
-.game-btn:hover{
+.game-btn:hover {
     background: #ddd;
 }
 
@@ -45,4 +45,10 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.uni-btn {
+    font-family: 'Comfortaa', sans-serif;
+    height: 54px;
+    width: 315px;
 }
