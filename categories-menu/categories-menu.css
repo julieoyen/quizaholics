@@ -64,7 +64,7 @@ h3 {
     font-weight: normal;
     font-size: 1rem;
     width: 50%;
-    height: 53px;
+    height: 51px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -74,6 +74,8 @@ h3 {
 .active {
     background-color: #5D63DF;
     box-shadow: inset 0 0 8px rgba(9, 14, 68, 0.55);
+    color: #FFFFFF;
+    outline: #FFFFFF solid 1px;
 }
 
 .history {
