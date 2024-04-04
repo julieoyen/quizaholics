@@ -1,138 +1,79 @@
-// async function fetchJSON(path) {
-//     try {
-//         const response = await fetch(path);
-//         const data = await response.json();
-//         return data;
-//     } catch (error) {
-//         console.error('Error fetching JSON:', error);
-//         return [];
-//     }
-// }
-//
-// async function displayItem(index, dataList) {
-//     const cardDiv = document.getElementById('card-1');
-//     if (dataList.length === 0) {
-//         cardDiv.innerHTML = '<p>No data available</p>';
-//         return;
-//     }
-//     const currentItem = dataList[index];
-//     cardDiv.innerHTML = `
-//             <p>${currentItem.id}</p>
-//             <p>${currentItem.text}</p>
-//         `;
-// }
-//
-// async function displayNextItem(dataList) {
-//     let currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
-//     currentIndex = (currentIndex + 1) % dataList.length;
-//     document.getElementById('card-1').dataset.index = currentIndex;
-//     displayItem(currentIndex, dataList);
-//     document.getElementById('back').disabled = false;
-// }
-//
-// async function displayPreviousItem(dataList) {
-//     let currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
-//     currentIndex = (currentIndex - 1 + dataList.length) % dataList.length;
-//     document.getElementById('card-1').dataset.index = currentIndex;
-//     displayItem(currentIndex, dataList);
-//     if (currentIndex === 0) {
-//         document.getElementById('back').disabled = true;
-//     }
-// }
-//
-// window.onload = async () => {
-//     document.getElementById('card-1').innerHTML = '<p>Start playing!</p>';
-//     document.getElementById('back').disabled = true;
-//
-//     let list1Data = await fetchJSON('../why-me/why-me.json').then(data => data.list1);
-//     let list2Data = await fetchJSON('../why-me/why-me-english.json').then(data => data.list2);
-//
-//     document.getElementById('eng-btn').addEventListener('click', () => {
-//         document.getElementById('card-1').dataset.index = 0;
-//         displayItem(0, list2Data);
-//     });
-//
-//     document.getElementById('nor-btn').addEventListener('click', () => {
-//         document.getElementById('card-1').dataset.index = 0;
-//         displayItem(0, list1Data);
-//     });
-//
-//     document.getElementById('next').addEventListener('click', () => {
-//         const currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
-//         displayNextItem(document.getElementById('eng-btn').classList.contains('active') ? list2Data : list1Data);
-//     });
-//
-//     document.getElementById('back').addEventListener('click', () => {
-//         const currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
-//         displayPreviousItem(document.getElementById('eng-btn').classList.contains('active') ? list2Data : list1Data);
-//     });
-// };
-async function fetchJSON(path) {
+// Define global variables
+let listData = [];
+let currentIndex = 0;
+let langBtnActiveClass = 'eng-btn'; // Default language button active class
+
+// Function to fetch JSON data
+async function fetchJSONData(lang) {
     try {
+        const path = lang === 'eng' ? '../why-me/why-me-english.json' : '../why-me/why-me.json';
         const response = await fetch(path);
         const data = await response.json();
-        return data;
+        listData = lang === 'eng' ? data.list2 : data.list1;
+        displayItem(currentIndex);
     } catch (error) {
         console.error('Error fetching JSON:', error);
-        return [];
     }
 }
 
-async function displayItem(index, dataList) {
+// Function to display item
+async function displayItem(index, placeholderText = '') {
     const cardDiv = document.getElementById('card-1');
-    if (dataList.length === 0) {
-        cardDiv.innerHTML = '<p>No data available</p>';
+    if (listData.length === 0) {
+        cardDiv.innerHTML = `<p>${placeholderText}</p>`;
         return;
     }
-    const currentItem = dataList[index];
+    const currentItem = listData[index];
     cardDiv.innerHTML = `
             <p>${currentItem.id}</p>
             <p>${currentItem.text}</p>
         `;
 }
 
-async function displayNextItem(dataList) {
-    let currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
-    currentIndex = (currentIndex + 1) % dataList.length;
-    document.getElementById('card-1').dataset.index = currentIndex;
-    displayItem(currentIndex, dataList);
-    document.querySelector('.back').disabled = false;
+
+// Function to handle next button click
+function handleNextClick() {
+    currentIndex = (currentIndex + 1) % listData.length;
+    displayItem(currentIndex);
+    document.getElementById('back').disabled = false;
 }
 
-async function displayPreviousItem(dataList) {
-    let currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
-    currentIndex = (currentIndex - 1 + dataList.length) % dataList.length;
-    document.getElementById('card-1').dataset.index = currentIndex;
-    displayItem(currentIndex, dataList);
-    if (currentIndex === 0) {
-        document.querySelector('.back').disabled = true;
-    }
+// Function to handle back button click
+function handleBackClick() {
+    currentIndex = (currentIndex - 1 + listData.length) % listData.length;
+    displayItem(currentIndex);
 }
 
-window.onload = async () => {
+// Function to handle language button click
+function handleLangBtnClick(langBtn) {
+    langBtnActiveClass = langBtn.classList.contains('eng-btn') ? 'eng-btn' : 'nor-btn';
+    fetchJSONData(langBtnActiveClass === 'eng-btn' ? 'eng' : 'nor');
+}
+
+// Function to initialize the page
+async function initializePage() {
+    // Set initial text in card-1
     document.getElementById('card-1').innerHTML = '<p>Start playing!</p>';
-    document.querySelector('.back').disabled = true;
 
-    let list1Data = await fetchJSON('../why-me/why-me.json').then(data => data.list1);
-    let list2Data = await fetchJSON('../why-me/why-me-english.json').then(data => data.list2);
+    // Disable back button initially
+    document.getElementById('back').disabled = true;
 
-    document.querySelector('.eng-btn').addEventListener('click', () => {
-        document.getElementById('card-1').dataset.index = 0;
-        displayItem(0, list2Data);
+    // Attach event listeners to buttons
+    document.getElementById('next').addEventListener('click', handleNextClick);
+    document.getElementById('back').addEventListener('click', handleBackClick);
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => handleLangBtnClick(btn));
     });
 
-    document.querySelector('.nor-btn').addEventListener('click', () => {
-        document.getElementById('card-1').dataset.index = 0;
-        displayItem(0, list1Data);
-    });
+    // Fetch JSON data for the default language
+    await fetchJSONData('eng'); // Assuming English is the default language
+}
 
-    document.querySelector('.next').addEventListener('click', () => {
-        const currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
-        displayNextItem(document.querySelector('.eng-btn').classList.contains('active') ? list2Data : list1Data);
-    });
+// Initialize the page when the window loads
+window.onload = async () => {
+    // Initialize the page
+    await initializePage();
 
-    document.querySelector('.back').addEventListener('click', () => {
-        const currentIndex = parseInt(document.getElementById('card-1').dataset.index || 0);
-        displayPreviousItem(document.querySelector('.eng-btn').classList.contains('active') ? list2Data : list1Data);
-    });
+    // Display placeholder text when the page loads
+    displayItem(0, 'Choose language and start playing!');
 };
