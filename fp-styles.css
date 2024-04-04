@@ -1,0 +1,34 @@
+:root{
+    --almostwhite: #e5e5e5;
+    --gradienttext: linear-gradient(#9F87FF, #C275FF);
+    --firstcard: linear-gradient(#B547D5, #F05A8A);
+    --secondcard: linear-gradient(#5964E0, #B848D4);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.btns-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.fp-btns {
+    width: 15.5rem;
+    height: 3rem;
+    border: none;
+    border-radius: 1.75rem;
+    font-size: 1.25rem;
+    color: var(--almostwhite);
+    font-family: "Comfortaa", sans-serif;
+}
+
+.quiz-btn {
+    background-image: linear-gradient(45deg, #EF7277, #C245D1);
+}
+
+.games-btn {
+    background-image: linear-gradient(45deg, #4B6EDE, #C245D1);
+}
