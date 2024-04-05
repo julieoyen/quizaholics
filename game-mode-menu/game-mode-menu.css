@@ -77,3 +77,7 @@ h3 {
     height: 40px;
     width: 40px;
 }
+
+a {
+    text-decoration: none;
+}
