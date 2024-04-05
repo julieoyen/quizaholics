@@ -40,7 +40,7 @@ h1 {
     background: linear-gradient(45deg, #EF7378, #CA4EC2);
     border-radius: 28px;
     width: 335px;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 370px;
@@ -48,7 +48,7 @@ h1 {
 
 #top-answers-dropdown {
     width: 100%;
-    display: flex;            
+    display: flex;
     justify-content: flex-end;
     gap: 1rem;
     cursor: pointer;
@@ -59,6 +59,8 @@ p {
 }
 
 #answers-right-wrong {
+  display: flex;
+  justify-content: space-between;
   margin-top: 2rem;
 }
 
