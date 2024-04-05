@@ -2,6 +2,7 @@ const selectorWrapper = document.querySelector(".gameModeButtonsWrapper");
 const categoriesWrapper = document.querySelector(".categories-btns");
 let selectedGameMode = ""; // Initialize selectedGameMode variable
 
+
 if (selectorWrapper) {
     let selectorButtons = selectorWrapper.querySelectorAll(".gameModeButton");
     selectorButtons.forEach(button => {
@@ -39,4 +40,3 @@ function clearActives(classlist) {
     }
 }
 
-// prøv gi gamemode kanppenne id, getelementbyid, if else, api link
