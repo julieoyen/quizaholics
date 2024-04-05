@@ -78,6 +78,10 @@ h3 {
     outline: #FFFFFF solid 1px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .history {
     grid-area: history;
     height: 157px;
