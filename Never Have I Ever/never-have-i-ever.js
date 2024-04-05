@@ -1,4 +1,3 @@
-let shuffledStatements = [];
 let currentIndex = 0;
 let currentLanguage = "eng";
 
@@ -23,7 +22,7 @@ function shuffleArray(array) {
   }
 }
 
-function displayStatement(statements, index) {
+function displayStatement(statements, index, language) {
   const statement = statements[index];
   const firstCardElement = document.getElementById("first-card");
   firstCardElement.textContent = statement.text;
@@ -31,18 +30,20 @@ function displayStatement(statements, index) {
 
 function onNextButtonClick(statements) {
   currentIndex = (currentIndex + 1) % statements.length;
-  displayStatement(statements, currentIndex);
+  displayStatement(statements, currentIndex, currentLanguage);
 }
 
 function onBackButtonClick(statements) {
   currentIndex = (currentIndex - 1 + statements.length) % statements.length;
+  displayStatement(statements, currentIndex, currentLanguage);
 }
 
 async function onLanguageButtonClick(language) {
   currentLanguage = language;
   const data = await fetchData(language);
   shuffleArray(data.statements);
-  displayStatement(data.statements, currentIndex);
+  currentIndex = 0; // Reset currentIndex when language changes
+  displayStatement(data.statements, currentIndex, currentLanguage);
 }
 
 (async () => {
@@ -50,7 +51,7 @@ async function onLanguageButtonClick(language) {
     const engData = await fetchData(currentLanguage);
     const statements = engData.statements;
     shuffleArray(statements);
-    displayStatement(statements, currentIndex);
+    displayStatement(statements, currentIndex, currentLanguage);
 
     const engButton = document.querySelector(".eng-btn");
     const norButton = document.querySelector(".nor-btn");
