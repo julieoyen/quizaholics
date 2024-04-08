@@ -25,8 +25,10 @@ if (categoriesWrapper) {
                 clearActives(categoriesBtns);
                 this.classList.toggle('clicked');
                 let selectedCategory = this.dataset.value;
-                let apiUrl = `https://opentdb.com/api.php?amount=20&category=${selectedCategory}&type=${selectedGameMode}`;
+                // let apiUrl = `https://opentdb.com/api.php?amount=20&category=${selectedCategory}&type=${selectedGameMode}`;
+                fetchQuestions(selectedCategory, selectedGameMode);
                 console.log(apiUrl);
+
             }
         });
     });
@@ -40,3 +42,14 @@ function clearActives(classlist) {
     }
 }
 
+function fetchQuestions(selectedCategory, selectedGameMode) {
+    let apiUrlQuestions = `https://opentdb.com/api.php?amount=20&category=${selectedCategory}&type=${selectedGameMode}`;
+
+    fetch(apiUrlQuestions)
+        .then(response => response.json())
+        .then(data => {
+            localStorage.setItem('quizData', JSON.stringify(data));
+            window.location.href = '../quiz-questions/quiz-questions.html';
+        })
+        .catch(error => console.error('Error fetching questions', error))
+}
