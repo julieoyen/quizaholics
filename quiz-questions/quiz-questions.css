@@ -67,3 +67,10 @@
 .answer-btn-single.clicked {
     border: 3px solid #fff;
 }
+
+.answer-btn-single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
