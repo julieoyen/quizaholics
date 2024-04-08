@@ -25,8 +25,10 @@ if (categoriesWrapper) {
                 clearActives(categoriesBtns);
                 this.classList.toggle('clicked');
                 let selectedCategory = this.dataset.value;
-                let apiUrl = `https://opentdb.com/api.php?amount=20&category=${selectedCategory}&type=${selectedGameMode}`;
+                // let apiUrl = `https://opentdb.com/api.php?amount=20&category=${selectedCategory}&type=${selectedGameMode}`;
+                fetchQuestions(selectedCategory, selectedGameMode);
                 console.log(apiUrl);
+
             }
         });
     });
@@ -51,4 +53,3 @@ function fetchQuestions(selectedCategory, selectedGameMode) {
         })
         .catch(error => console.error('Error fetching questions', error))
 }
-
