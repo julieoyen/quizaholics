@@ -51,6 +51,7 @@ p {
     font-size: 1.25rem;
     color: var(--almostwhite);
     font-family: "Comfortaa", sans-serif;
+    cursor: pointer;
 }
 
 .quiz-btn {
