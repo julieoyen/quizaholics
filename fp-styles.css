@@ -33,7 +33,7 @@ p {
     font-size: 1.5rem;
     font-weight: 300;
     color: var(--almostwhite);
-    margin: 0;
+    margin: 6.438rem 0 0 0;
     padding: 0;
 }
 
@@ -64,4 +64,10 @@ p {
 
 a {
     text-decoration: none;
+}
+
+.animation {
+    width: 15.5rem;
+    height: 15.5rem;
+    margin: 2.5rem 0;
 }
