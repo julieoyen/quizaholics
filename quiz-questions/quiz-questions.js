@@ -1,79 +1,80 @@
-document.addEventListener("DOMContentLoaded", function () {
+let currentQuestionNumber = 0;
+let score = 0;
+let questions = [];
+const maxQuestions = 10;
 
+document.addEventListener("DOMContentLoaded", function () {
     const quizData = JSON.parse(localStorage.getItem('quizData'));
     if (quizData) {
-        displayQuestions(quizData);
+        questions = quizData.results;
+        displayQuestion();
     } else {
         console.error('No quiz data found');
     }
 
     const answerButtons = document.querySelectorAll('.answer-btn-single');
-
     answerButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove border from all buttons
-            answerButtons.forEach(btn => {
-                btn.classList.remove('clicked');
-            });
-            // Add border to the clicked button
-            button.classList.add('clicked');
+            answerQuestion(button);
         });
+    });
+
+    const confirmButton = document.getElementById('confirm-btn');
+    confirmButton.addEventListener('click', () => {
+        if (currentQuestionNumber < maxQuestions) {
+            displayQuestion();
+        } else {
+            window.location.href = 'quiz-final-score.html';
+        }
     });
 });
 
-function displayQuestions(data) {
-
+function displayQuestion() {
     const questionContainer = document.getElementById('question-container');
-    const answerButtons = document.querySelectorAll('.answer-btn-single');
+    const qNumber = document.getElementById('current-question');
 
-    // clear previous question and answer buttons
-    questionContainer.innerHTML = '';
-    answerButtons.forEach(button => {
-        button.innerHTML = '';
-        button.classList.remove('clicked');
+    const currentQuestion = questions[currentQuestionNumber];
+    questionContainer.innerHTML = `<p>${currentQuestion.question}</p>`;
+
+    const answerButtons = document.querySelectorAll('.answer-btn-single');
+    const answers = [currentQuestion.correct_answer, ...currentQuestion.incorrect_answers];
+    shuffleArray(answers);
+    answerButtons.forEach((button, index) => {
+        button.textContent = answers[index];
+        button.classList.remove('correct', 'incorrect', 'clicked');
     });
 
-    //randomly select one question from the data
-    const randomIndex = Math.floor(Math.random() * data.results.length);
-    const question = data.results[randomIndex];
-
-    //create question element
-    const questionElement = document.createElement('div');
-    questionElement.classList.add('question');
-    questionElement.innerHTML = `<p>${question.question}</p>`;
-    questionContainer.appendChild(questionElement);
-
-    // combine correct and incorrect answers and shuffle them
-    const answers = [question.correct_answer, ...question.incorrect_answers];
-    shuffleArray(answers);
-
-    //assign answers to answer buttons
-    answerButtons.forEach((button, i) => {
-        button.textContent = answers[i];
-        button.addEventListener('click', () => {
-            checkAnswer(button, question.correct_answer);
-        })
-    })
+    currentQuestionNumber++;
+    qNumber.textContent = currentQuestionNumber;
 }
 
-
-function checkAnswer(button, correctAnswer) {
-    const selectedAnswer = button.textContent;
-    const correctButton = document.querySelector(`.answer-btn-single[data-answer=${correctAnswer}]`);
+function answerQuestion(clickedButton) {
+    const selectedAnswer = clickedButton.textContent;
+    const correctAnswer = questions[currentQuestionNumber - 1].correct_answer;
+    const correctButton = document.querySelector(`.answer-btn-single[data-answer="${correctAnswer}"]`);
 
     if (selectedAnswer === correctAnswer) {
-        button.classList.add('correct');
+        clickedButton.classList.add('correct');
+        score += 1;
     } else {
-        button.classList.add('incorrect');
-        correctButton.classList.add('correct');
+        clickedButton.classList.add('incorrect');
+        if (correctButton) {
+            correctButton.classList.add('correct');
+        }
     }
+
+    // Remove border from all buttons
+    const answerButtons = document.querySelectorAll('.answer-btn-single');
+    answerButtons.forEach(btn => {
+        btn.classList.remove('clicked');
+    });
+    // Add border to the clicked button
+    clickedButton.classList.add('clicked');
 }
 
-// function to shuffle array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
-        const x = Math.floor(Math.random() * (i + 1));
-        [array[i], array[x]] = [array[x], array[i]];
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
 }
-
