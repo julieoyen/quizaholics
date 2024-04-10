@@ -72,3 +72,20 @@ async function onLanguageButtonClick(language) {
     console.error("Error:", error);
   }
 })();
+
+document.addEventListener("DOMContentLoaded", function () {
+  var gameInfo = document.getElementById("game-info");
+  var rules = document.getElementById("rules");
+
+  rules.style.display = "none";
+
+  gameInfo.addEventListener("click", function () {
+    if (rules.style.display === "none") {
+      rules.style.display = "block";
+      gameInfo.textContent = "X";
+    } else {
+      rules.style.display = "none";
+      gameInfo.textContent = "ℹ";
+    }
+  });
+});

@@ -22,13 +22,45 @@
     background: var(--secondcard);
     transform: rotate(4deg);
 }
-
 .game-btn-box {
     display: flex;
     position: relative;
     margin-top: 96px;
+    z-index: 2;
 }
 
 h1{
     color: white;
+}
+
+#rules {
+    position: absolute;
+    z-index: 999; 
+    color: black;
+    background-color: azure;
+    padding: 50px;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    max-width: 80%; 
+}
+
+#rules h1 {
+    color: black;
+}
+
+#rules .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#game-info{
+    color: white;
+    border: 1px solid;
+    padding: 5px 10px;
+    border-radius: 50%;
+
 }
