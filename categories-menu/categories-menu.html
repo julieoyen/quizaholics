@@ -18,7 +18,7 @@
 
 <body>
     <header>
-        <img src="../assets/icons/quizzical.svg" alt="">
+        <img src="../assets/icons/quizzical.svg" alt="Quizzical logo">
     </header>
 
     <main>
@@ -27,17 +27,17 @@
             <h2>CATEGORIES</h2>
         </div>
 <!--endre til select?-->
-        <span class="game-mode-selector">
+        <div class="game-mode-selector">
             <div class="gameModeButtonsWrapper">
                 <div class="gameModeButton boolean" data-value="boolean"> true / false</div>
                 <div class="gameModeButton multiple" data-value="multiple">multiple choice</div>
             </div>
-        </span>
+        </div>
 
 
         <div class="categories-wrapper">
-            <div class="categories-btns">
-                <a href="../quiz-questions/quiz-questions.html" class="history categories-btn" data-value="23">
+            <nav class="categories-btns" role="navigation">
+                <a href="../quiz-questions/quiz-questions.html" class="history categories-btn" data-value="23" type="button" aria-label="history quiz">
                     <div class="icon">
                         <img src="../assets/icons/mdi_castle.png" alt="history icon">
                     </div>
@@ -73,7 +73,7 @@
                     </div>
                     <h3>CELEBRITIES</h3>
                 </div>
-            </div>
+            </nav>
         </div>
     </main>
 </body>
