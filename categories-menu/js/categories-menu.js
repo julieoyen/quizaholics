@@ -2,7 +2,6 @@ const selectorWrapper = document.querySelector(".gameModeButtonsWrapper");
 const categoriesWrapper = document.querySelector(".categories-btns");
 let selectedGameMode = ""; // Initialize selectedGameMode variable
 
-
 if (selectorWrapper) {
     let selectorButtons = selectorWrapper.querySelectorAll(".gameModeButton");
     selectorButtons.forEach(button => {
@@ -25,6 +24,7 @@ if (categoriesWrapper) {
                 clearActives(categoriesBtns);
                 this.classList.toggle('clicked');
                 let selectedCategory = this.dataset.value;
+                localStorage.clear();
                 // let apiUrl = `https://opentdb.com/api.php?amount=20&category=${selectedCategory}&type=${selectedGameMode}`;
                 fetchQuestions(selectedCategory, selectedGameMode);
             }

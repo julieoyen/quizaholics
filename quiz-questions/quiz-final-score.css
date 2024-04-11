@@ -1,3 +1,6 @@
+body {
+    height: fit-content;
+}
 
 main {
     width: 335px;
@@ -44,6 +47,7 @@ h1 {
     flex-direction: column;
     position: absolute;
     top: 370px;
+    margin-top: 16px;
 }
 
 #top-answers-dropdown {
@@ -60,10 +64,33 @@ p {
 
 #answers-right-wrong {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-top: 2rem;
+  gap: 8px;
 }
 
+.answers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.answer {
+    font-size: 8px;
+    font-weight: lighter;
+}
+
+.correct-answer {
+    color: #8FFF00;
+}
+
+.question {
+    font-size: 12px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
 
 
