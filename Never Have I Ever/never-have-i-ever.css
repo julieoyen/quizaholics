@@ -16,6 +16,8 @@
     position: absolute;
     top: 162px;
     z-index: 5;
+    font-family: Comfortaa;
+    padding: 30px;
 }
 
 #second-card {
@@ -59,8 +61,9 @@ h1{
 
 #game-info{
     color: white;
-    border: 1px solid;
-    padding: 5px 10px;
-    border-radius: 50%;
+padding-left: 50px;
+}
 
+.eng-btn, .nor-btn{
+    border-style: none;
 }
