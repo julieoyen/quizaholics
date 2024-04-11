@@ -15,3 +15,17 @@ function hideAllAnswers() {
         hideDropdownContent.style.display ="none";
     }
 }
+
+document.addEventListener("DOMContentLoaded", function (){
+    let getScore = localStorage.getItem('score');
+    if(getScore) {
+        displayScore.innerHTML = `${getScore} / 10`;
+    } else {
+        displayScore.innerHTML = '0 / 10';
+    }
+
+});
+
+document.addEventListener("DOMContentLoaded", function(){
+    let quizArray = JSON.parse(localStorage.getItem('quizData'));
+});
