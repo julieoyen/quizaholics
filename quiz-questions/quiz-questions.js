@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // reset selected answer tracking
             selectedAnswerCorrect = null;
             warningMessage.textContent = ''; // clear warning message
-
+            localStorage.setItem('score', score)
             // load next question or finish quiz
             if (currentQuestionNumber < maxQuestions) {
                 displayQuestion();

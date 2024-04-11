@@ -1,3 +1,5 @@
+let displayScore = document.getElementById("final-score");
+
 function displayAllAnswers() {
     const dropdownContent = document.getElementById("answers-dropdown");
     if (dropdownContent.style.display === "block") {
