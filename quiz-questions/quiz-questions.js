@@ -1,4 +1,5 @@
 let currentQuestionNumber = 0;
+let selectedAnswerCorrect = null;
 let score = 0;
 let questions = [];
 const maxQuestions = 10;
@@ -21,11 +22,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const confirmButton = document.getElementById('confirm-btn');
     confirmButton.addEventListener('click', () => {
-        if (currentQuestionNumber < maxQuestions) {
-            displayQuestion();
+        const warningMessage = document.getElementById('warning-not-answered');
+        // check if answer is selected
+        if (selectedAnswerCorrect !== null) {
+            // update score
+            if (selectedAnswerCorrect) {
+                score += 1;
+            }
+            // reset selected answer tracking
+            selectedAnswerCorrect = null;
+            warningMessage.textContent = ''; // clear warning message
+
+            // load next question or finish quiz
+            if (currentQuestionNumber < maxQuestions) {
+                displayQuestion();
+            } else {
+                window.location.href = 'quiz-final-score.html';
+            }
         } else {
-            window.location.href = 'quiz-final-score.html';
+            warningMessage.textContent = 'Please select an answer before proceeding.';
         }
+
     });
 });
 
@@ -41,6 +58,7 @@ function displayQuestion() {
     shuffleArray(answers);
     answerButtons.forEach((button, index) => {
         button.textContent = answers[index];
+        button.dataset.answer = answers[index]; // set data-answer attribute
         button.classList.remove('correct', 'incorrect', 'clicked');
     });
 
@@ -48,20 +66,10 @@ function displayQuestion() {
     qNumber.textContent = currentQuestionNumber;
 }
 
+
 function answerQuestion(clickedButton) {
     const selectedAnswer = clickedButton.textContent;
     const correctAnswer = questions[currentQuestionNumber - 1].correct_answer;
-    const correctButton = document.querySelector(`.answer-btn-single[data-answer="${correctAnswer}"]`);
-
-    if (selectedAnswer === correctAnswer) {
-        clickedButton.classList.add('correct');
-        score += 1;
-    } else {
-        clickedButton.classList.add('incorrect');
-        if (correctButton) {
-            correctButton.classList.add('correct');
-        }
-    }
 
     // Remove border from all buttons
     const answerButtons = document.querySelectorAll('.answer-btn-single');
@@ -70,6 +78,8 @@ function answerQuestion(clickedButton) {
     });
     // Add border to the clicked button
     clickedButton.classList.add('clicked');
+
+    selectedAnswerCorrect = (selectedAnswer === correctAnswer);
 }
 
 function shuffleArray(array) {
