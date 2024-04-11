@@ -69,6 +69,7 @@ h3 {
     justify-content: center;
     display: flex;
     border-radius: 28px;
+    cursor: pointer;
 }
 
 .active {
@@ -145,6 +146,7 @@ a {
     justify-content: flex-end;
     padding-left: 22px;
     gap: 20px;
+    cursor: pointer;
 }
 
 .icon img {

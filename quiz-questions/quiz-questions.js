@@ -3,6 +3,7 @@ let selectedAnswerCorrect = null;
 let score = 0;
 let questions = [];
 const maxQuestions = 10;
+let selectedAnswer = null;
 
 document.addEventListener("DOMContentLoaded", function () {
     const quizData = JSON.parse(localStorage.getItem('quizData'));
@@ -29,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (selectedAnswerCorrect) {
                 score += 1;
             }
+            saveAnsweredQuestion();
             // reset selected answer tracking
             selectedAnswerCorrect = null;
             warningMessage.textContent = ''; // clear warning message
@@ -70,7 +72,6 @@ function displayQuestion() {
 function answerQuestion(clickedButton) {
     const selectedAnswer = clickedButton.textContent;
     const correctAnswer = questions[currentQuestionNumber - 1].correct_answer;
-
     // Remove border from all buttons
     const answerButtons = document.querySelectorAll('.answer-btn-single');
     answerButtons.forEach(btn => {
@@ -87,4 +88,20 @@ function shuffleArray(array) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
+};
+
+function saveAnsweredQuestion() {
+    const selectedAnswer = document.querySelector('.answer-btn-single.clicked').textContent;
+    const correctAnswer = questions[currentQuestionNumber - 1].correct_answer;
+
+    const answeredQuestion = {
+        question: questions[currentQuestionNumber - 1].question,
+        selectedAnswer: selectedAnswer,
+        correctAnswer: correctAnswer,
+        isCorrect: selectedAnswer === correctAnswer
+    };
+
+    let answeredQuestions = JSON.parse(localStorage.getItem('answeredQuestions')) || [];
+    answeredQuestions.push(answeredQuestion);
+    localStorage.setItem('answeredQuestions', JSON.stringify(answeredQuestions));
 }
