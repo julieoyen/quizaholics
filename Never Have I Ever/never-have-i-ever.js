@@ -1,5 +1,5 @@
 let currentIndex = 0;
-let currentLanguage = "eng";
+let currentLanguage = localStorage.getItem("language") || "eng";
 
 async function fetchData(language) {
   try {
@@ -40,9 +40,10 @@ function onBackButtonClick(statements) {
 
 async function onLanguageButtonClick(language) {
   currentLanguage = language;
+  localStorage.setItem("language", language);
   const data = await fetchData(language);
   shuffleArray(data.statements);
-  currentIndex = 0; // Reset currentIndex when language changes
+  currentIndex = 0;
   displayStatement(data.statements, currentIndex, currentLanguage);
 }
 
@@ -52,12 +53,6 @@ async function onLanguageButtonClick(language) {
     const statements = engData.statements;
     shuffleArray(statements);
     displayStatement(statements, currentIndex, currentLanguage);
-
-    const engButton = document.querySelector(".eng-btn");
-    const norButton = document.querySelector(".nor-btn");
-
-    engButton.addEventListener("click", () => onLanguageButtonClick("eng"));
-    norButton.addEventListener("click", () => onLanguageButtonClick("no"));
 
     const nextButton = document.querySelector(
       ".game-btn-box .game-btn:nth-of-type(2)"
@@ -82,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
   gameInfo.addEventListener("click", function () {
     if (rules.style.display === "none") {
       rules.style.display = "block";
-      gameInfo.textContent = "X";
+      gameInfo.textContent = "close";
     } else {
       rules.style.display = "none";
       gameInfo.textContent = "ℹ";
