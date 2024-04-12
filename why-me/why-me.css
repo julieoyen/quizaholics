@@ -1,29 +1,6 @@
-/*.wm-outer-box {*/
-/*    margin-top: 32px;*/
-/*}*/
-
-/*.wm-cards {*/
-/*    height: 348px;*/
-/*    width: 302px;*/
-/*}*/
-
-/*#card-1 {*/
-/*    background: var(--firstcard);*/
-/*    position: absolute;*/
-/*    top: 168px;*/
-/*    z-index: 5;*/
-/*}*/
-
-/*#card-2 {*/
-/*    background: var(--secondcard);*/
-/*    transform: rotate(4deg);*/
-/*}*/
-
-/*.game-btn-box {*/
-/*    display: flex;*/
-/*    position: relative;*/
-/*    margin-top: 96px;*/
-/*}*/
+.game-header {
+    color: var(--almostwhite);
+}
 
 .wm-outer-box {
     margin-top: 32px;
@@ -32,7 +9,7 @@
 .wm-cards {
     height: 348px;
     width: 302px;
-    transition: background-color 1s ease-in-out; /* Add transition for background color */
+    transition: background-color 1s ease-in-out; 
 }
 
 #card-1 {
