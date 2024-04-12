@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             warningMessage.textContent = 'Please select an answer before proceeding.';
         }
-
+    console.log(score);
     });
 });
 
