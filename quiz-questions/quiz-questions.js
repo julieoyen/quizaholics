@@ -3,7 +3,6 @@ let selectedAnswerCorrect = null;
 let score = 0;
 let questions = [];
 const maxQuestions = 10;
-let selectedAnswer = null;
 
 document.addEventListener("DOMContentLoaded", function () {
     const quizData = JSON.parse(localStorage.getItem('quizData'));
