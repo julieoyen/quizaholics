@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
         throw new Error("Failed to fetch data");
       }
       const data = await response.json();
-      console.log("Data fetched successfully:", data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -38,11 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 norwegianBtn.addEventListener("click", function () {
-  console.log("Navigating to a new page...");
   window.location.href = "never-have-i-ever.html";
 });
 
 englishBtn.addEventListener("click", function () {
-  console.log("Navigating to a new page...");
   window.location.href = "never-have-i-ever.html";
 });
