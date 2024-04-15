@@ -62,8 +62,6 @@ h1{
 #game-info{
     color: white;
 padding-left: 50px;
+cursor: pointer;
 }
 
-.eng-btn, .nor-btn{
-    border-style: none;
-}
