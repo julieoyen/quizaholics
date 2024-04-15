@@ -40,7 +40,7 @@ async function displayItem(index, placeholderText = 'Choose language and start p
 function handleNextClick() {
     currentIndex = (currentIndex + 1) % listData.length;
     displayItem(currentIndex);
-    [firstCardColor, secondCardColor] = [secondCardColor, firstCardColor]; // Swap colors
+    [firstCardColor, secondCardColor] = [secondCardColor, firstCardColor];
     document.getElementById('back').disabled = false;
 }
 
@@ -77,3 +77,19 @@ window.onload = async () => {
     displayItem(0, 'Choose language and start playing!');
 };
 
+document.addEventListener("DOMContentLoaded", function () {
+    var gameInfo = document.getElementById("game-info");
+    var rules = document.getElementById("rules");
+
+    rules.style.display = "none";
+
+    gameInfo.addEventListener("click", function () {
+        if (rules.style.display === "none") {
+            rules.style.display = "block";
+            gameInfo.textContent = "close";
+        } else {
+            rules.style.display = "none";
+            gameInfo.textContent = "ℹ";
+        }
+    });
+});
