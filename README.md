@@ -40,23 +40,46 @@ To launch this project, click the link below:
 
 [Quizzical](https://quizaholics.netlify.app/)
 
+
 ### Installing
 
 1. Clone the repo:
 
-    ```bash
-    git clone https://github.com/julieoyen/quizaholics
-    ```
+```bash
+git clone https://github.com/julieoyen/quizaholics
+```
 
 2. Navigate to the project directory:
 
-    ```bash
-    cd quizzical
-    ```
+```bash
+cd quizaholics
+```
 
-3. Open `index.html` in your preferred web browser.
+3. Install the dependencies:
+
+```bash
+npm install
+```
+
+### Running
+
+Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
+
+To run the app, run the following commands:
+
+```bash
+npm run start
+```
+
 
 ## Usage 🔧
+
+### Viewing The Website Live 
+
+1. Open your web browser.
+2. Navigate to [Quizzical](https://quizaholics.netlify.app/).
+3. Explore the various quizes and games.
+
 
 ### Playing Quizzes and Games 
 
