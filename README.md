@@ -1,20 +1,19 @@
-
 <img src="assets/icons/headerimg.png" alt="Image of logo on index.html">
 
 Quizzical is a fun and interactive web application that offers various quiz and game modes to engage users. The application is built with HTML, CSS, and JavaScript, providing a smooth and responsive user experience.
 
 ## Table of Contents 📚
 
-1. [Project Overview](#project-overview)
-2. [Demo](#demo)
-3. [Features](#features)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Built With](#built-with)
-7. [Contributing](#contributing)
-8. [Contact](#contact)
-9. [License](#license)
-10. [Acknowledgments](#acknowledgments)
+1. [Project Overview](#project-overview-)
+2. [Demo](#demo-)
+3. [Features](#features-)
+4. [Installation](#installation-)
+5. [Usage](#usage-)
+6. [Built With](#built-with-)
+7. [Contributing](#contributing-)
+8. [Contact](#contact-)
+9. [License](#license-)
+10. [Acknowledgments](#acknowledgments-)
 
 ## Project Overview 📝
 
@@ -33,8 +32,13 @@ Demo of Never Have I Ever<br>
 - Game Modes: Participate in interactive games like "Never Have I Ever" and "Why Me?".
 - Score Tracking: Track your scores and view final results.
 
+## Installation 📦
 
-## Installation 🎥
+### Live
+
+To launch this project, click the link below:
+
+[Quizzical](https://quizaholics.netlify.app/)
 
 ### Installing
 
@@ -60,13 +64,13 @@ Demo of Never Have I Ever<br>
 2. Choose a quiz category or game mode to start playing.
 3. Follow the prompts to answer questions and track your score.
 
-## Built With
+## Built With 🛠️
 
 - HTML
 - CSS
 - JavaScript
 
-## Contributing
+## Contributing 🤝
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -74,7 +78,7 @@ Demo of Never Have I Ever<br>
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Contact
+## Contact 📞
 
 Feel free to reach out to me for any inquiries or contributions.
 
@@ -84,7 +88,6 @@ Feel free to reach out to me for any inquiries or contributions.
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Acknowledgments
+## Acknowledgments 🙏
 
-A big thank you to Anniken, Ingrid, Erica and Fillip, who also contributed to this project!
-
+A big thank you to Anniken, Ingrid, Erica, and Fillip, who also contributed to this project!
