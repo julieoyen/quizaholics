@@ -9,7 +9,7 @@ Quizzical is a fun and interactive web application that offers various quiz and 
 3. [Features](#features-)
 4. [Installation](#installation-)
 5. [Usage](#usage-)
-6. [Built With](#built-with-)
+6. [Built With](#built-with)
 7. [Contributing](#contributing-)
 8. [Contact](#contact-)
 9. [License](#license-)
@@ -58,7 +58,7 @@ To launch this project, click the link below:
 
 ## Usage 🔧
 
-### Playing Quizzes and Games 🎮
+### Playing Quizzes and Games 
 
 1. Navigate to the home page and select either "Quiz" or "Games".
 2. Choose a quiz category or game mode to start playing.
