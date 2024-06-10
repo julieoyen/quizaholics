@@ -1,3 +1,5 @@
+## Quizzical
+
 <img src="assets/icons/headerimg.png" alt="Image of logo on index.html">
 
 Quizzical is a fun and interactive web application that offers various quiz and game modes to engage users. The application is built with HTML, CSS, and JavaScript, providing a smooth and responsive user experience.
